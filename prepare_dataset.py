@@ -21,8 +21,8 @@ labels = [
 days = ["monday","tuesday","wednesday","thursday","friday"]
 types = ["pvt","public"]
 
-indir="data/flow_gen/"
-outdir="data/freq_output/"
+indir="data/enhanced_flow_gen/"
+outdir="data/enhanced_freq_output/"
 
 
 csvfiles = [f for f in listdir(indir) if isfile(join(indir, f))]

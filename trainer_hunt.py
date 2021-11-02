@@ -47,16 +47,16 @@ tf.compat.v1.Session(config=config)
 
 #dataset_train = datagenerator.loadDataset("../datasetEvaluation/attackFilesExtractor/CIC-IDS-2017/Monday-WorkingHours.pcap_ISCX_Cleaned.csv")
 datasetType = 'hunt2021'
-_trainingFile = 'data/testfiles/custom_normal_public.csv'
-_mainresultDir = 'results/'
+_trainingFile = 'data/enhanced_testfiles/custom_normal_public.csv'
+_mainresultDir = 'enhanced_results/'
 testfiles = ["custom_reconnaissance","custom_sqli","custom_portscan","custom_xss","custom_bruteforce","custom_dataexf","custom_foothold","custom_lateralmovement"]
 
 
 if not pathlib.Path(_mainresultDir).exists():
     os.mkdir(_mainresultDir)
-overviewfile = "overview/overview_results.csv"
-if not pathlib.Path("overview").exists():
-    os.mkdir("overview")
+overviewfile = "enhanced_overview/overview_results.csv"
+if not pathlib.Path("enhanced_overview").exists():
+    os.mkdir("enhanced_overview")
 
 
 
@@ -152,7 +152,7 @@ for modelname in modelnames.keys():
                             if len(foundtest)>0:
                                 continue
 
-                    testDatasetFile = "data/testfiles/" + testfile + ".csv"
+                    testDatasetFile = "data/enhanced_testfiles/" + testfile + ".csv"
                     print(testDatasetFile)
                     dataset_test = datagenerator.loadDataset(testDatasetFile,modelConfig["useSequence"])
                     checklabels = len(dataset_test.groupby(["Activity", "Stage"]).size())

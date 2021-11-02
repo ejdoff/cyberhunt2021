@@ -8,7 +8,7 @@ import os
 
 
 orgtestfiles = ["custom_reconnaissance","custom_foothold","custom_lateralmovement","custom_dataexf","custom_sqli","custom_portscan","custom_xss","custom_bruteforce"]
-overviewFile = "overview/overview_results.csv"
+overviewFile = "enhanced_overview/overview_results.csv"
 overview = pd.read_csv(overviewFile, header=0, encoding="ISO-8859-1")
 overview = overview[overview["epochs"]==100]
 overview = overview.round(3)
@@ -73,11 +73,11 @@ for plottype in ["PR","ROC"]:
             if len(ix)==1:
                 id = overview.loc[ix, "id"].values[0]
                 if plottype=="PR":
-                    _resultsDir = "results/" + id + "/precision_recall/"
+                    _resultsDir = "enhanced_results/" + id + "/precision_recall/"
                     x = np.loadtxt(_resultsDir + key+ '-recall.csv', unpack=True)
                     y = np.loadtxt(_resultsDir + key+ '-precision.csv', unpack=True)
                 else:
-                    _resultsDir = "results/" + id + "/fpr_tpr/"
+                    _resultsDir = "enhanced_results/" + id + "/fpr_tpr/"
                     x = np.loadtxt(_resultsDir + key + '-fpr.csv', unpack=True)
                     y = np.loadtxt(_resultsDir + key + '-tpr.csv', unpack=True)
                 plt.plot(x, y, colorCodes[colorCounter])

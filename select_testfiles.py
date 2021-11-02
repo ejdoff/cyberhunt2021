@@ -3,8 +3,8 @@ import numpy as np
 from os import listdir
 from os.path import isfile, join
 
-indir="data/freq_output/"
-outdir="data/testfiles/"
+indir="data/enhanced_freq_output/"
+outdir="data/enhanced_testfiles/"
 
 def getfilename(selecttype,selectday,daylist):
     selecttype = selecttype.lower()
@@ -14,7 +14,7 @@ def getfilename(selecttype,selectday,daylist):
             return day
     return None
 
-csvfiles = [f for f in listdir(indir) if isfile(join(indir, f)) and filter(f)]
+csvfiles = [f for f in listdir(indir) if isfile(join(indir, f))]  # and filter(f)]
 cyberhunttests = pd.read_csv(indir+"overview.csv",sep=",",header=0,decimal=".",index_col=False)
 newoverview =[]
 overvieworiginaltests = pd.read_csv(indir+"overview_apt2020tests.csv",sep=",",header=0,decimal=".",index_col=False)

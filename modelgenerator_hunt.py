@@ -74,7 +74,7 @@ def fit( model, config,id):
         plt.ylabel('loss')
         plt.legend()
         plt.savefig(config["resultDir"]+'LossColored_' + config["modelname"] + '.png')
-        plt.show()
+        # plt.show()
     else:
         raise Exception("Failed: fit modelname" + config["modelname"] + " not existing")
     return model
@@ -257,7 +257,7 @@ def predict( model, config):
     plt.title('ROC ' + config["testname"])
     plt.legend(loc='lower right')
     plt.savefig(aucDir + "ROC-curve_" + "_" + config["testname"] + ".png")
-    plt.show()
+    # plt.show()
 
     plt.figure()
     plt.plot(recall,precision, color='red', label='AUC = %0.3f)' % pr_auc)
@@ -269,7 +269,7 @@ def predict( model, config):
     plt.title('PR ' + config["testname"])
     plt.legend(loc='lower right')
     plt.savefig(aucDir + "PR-curve_" + "_" + config["testname"] + ".png")
-    plt.show()
+    # plt.show()
 
     return prediction_input,prediction_result, rmse, decisions,roc_auc,pr_auc
 
