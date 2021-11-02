@@ -5,4 +5,11 @@
 build/
 .gradle/
 
-
+data/enhanced_flow_gen
+dataa/flow_gen
+enhanced_figures/
+enhanced_overview/
+enhanced_results/
+figures/
+overview/
+results/
