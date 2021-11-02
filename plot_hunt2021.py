@@ -89,7 +89,7 @@ for plottype in ["PR","ROC"]:
         plt.legend(tuple(pltlabels),
                    prop={"size": 11}, loc='best')
 
-        _figuresDir = "figures/"
+        _figuresDir = "enhanced_figures/"
         if not pathlib.Path(_figuresDir).exists():
             os.mkdir(_figuresDir)
 
