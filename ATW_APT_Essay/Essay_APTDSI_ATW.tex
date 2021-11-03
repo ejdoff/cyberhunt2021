@@ -1,0 +1,72 @@
+\documentclass[11pt]{article}
+\usepackage{acl2015}
+\usepackage{times}
+\usepackage{url}
+\usepackage{latexsym}
+
+\title{"Pakkende Titel"}
+
+\author{Doff, E \\
+  Affiliation / Address line 1 \\
+  {\tt email@domain} \\\And
+  Hasker, MW \\
+  Affiliation / Address line 1 \\
+  {\tt email@domain} \\\And
+  van Kooten, A \\
+  Netherlands Defence Academy \\
+  {\tt a.v.kooten.02@mindef.nl}  }
+
+\date{}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+In this paper we assume a systems engineering point of view in respect to the use of machine learning (ML) in an intrusion detection system (IDS) for Advanced Persistent Threats (APT), focusing on the lateral movement phase of the APT. After validating the need for a ML based IDS, we explore the potency of applying Exploratory Data Analysis to the raw network traffic data in the DAPT2020 database\cite{Myneni2020}. We conclude with results of the applied Exploratory Data Analysis.
+\end{abstract}
+
+
+\section{Introduction}
+What is an APT?\\
+What does the Lateral movement phase consist of?
+
+\subsection{the Data-set}
+Wat is er zo uniek aan de DAPT2020?\\
+Waarom hebben we deze gekozen?
+
+\section{Analysis of previous work}
+Wat heeft Allard gedaan, wat blijkt uit zijn resultaten?
+
+\section{Needs analysis}
+Waarom is het nuttig wat wij doen?
+
+\section{Exploratory Data Analysis}
+Exploratory data analysis (EDA) is a well-established statistical tradition that provides conceptual and computational tools for discovering patterns to foster hypotheses development and refinement\cite{Behrens1997}. The goal of EDA is to discover patterns in data. EDA complements the more thorough Confirmatory Data Analysis (CDA), which tests the hypothesis. EDA can be characterized by five principles;
+\begin{itemize}
+    \item Emphasis on the substantive understanding of the data
+    \item Graphic model representations
+    \item Tentative model building and hypothesis generation
+    \item Use of robust measures and analysis
+    \item Skepticism and flexibility in regard to applied methods
+\end{itemize}
+
+\subsection{Exploring the DAPT2020}
+EDA is applied to the raw data-sets as used by Myneni et al for the DAPT2020 data-set\cite{Myneni2020}. Within the limited time we had for EDA, we laid our focus on the aim of substantive understanding by displaying the data-set graphically. Primarily on the day with only benign network traffic, and secondly on the day which contains the lateral movement phase. By comparing the products of EDA applied to these two data-sets, we aimed to find relations or features that have the potency to increase the effectiveness of the Machine Learning IDS.\\
+correlation analysis: which variables correlate with each other:\\
+scatterplots, regression models
+
+
+What have we explored?\\
+What does this tell us?\\
+What can we do with this?\\
+
+\section{Conclusion}
+
+\section*{Acknowledgments}
+Grote dank gaat uit naar ons onverbiddelijke doorzettingsvermogen bij onaflatende tegenslagen in college's, planning, werking van code, en het weer.\cite{Dijk2021}
+
+
+% include your own bib file like this:
+\bibliographystyle{abbrv}
+\bibliography{refs}
+
+\end{document}
