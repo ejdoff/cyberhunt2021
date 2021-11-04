@@ -49,7 +49,7 @@ tf.compat.v1.Session(config=config)
 datasetType = 'hunt2021'
 _trainingFile = 'data/enhanced_testfiles/custom_normal_public.csv'
 _mainresultDir = 'enhanced_results/'
-testfiles = ["custom_reconnaissance","custom_sqli","custom_portscan","custom_xss","custom_bruteforce","custom_dataexf","custom_foothold","custom_lateralmovement"]
+testfiles = ["custom_lateralmovement"] #["custom_reconnaissance","custom_sqli","custom_portscan","custom_xss","custom_bruteforce","custom_dataexf","custom_foothold","custom_lateralmovement"]
 
 
 if not pathlib.Path(_mainresultDir).exists():

@@ -6,7 +6,11 @@ build/
 .gradle/
 
 data/enhanced_flow_gen
-dataa/flow_gen
+data/enhanced_freq_output
+data/enhanced_testfiles
+data/flow_gen
+data/freq_output
+data/testfiles
 enhanced_figures/
 enhanced_overview/
 enhanced_results/
